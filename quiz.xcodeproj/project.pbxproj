@@ -12,6 +12,8 @@
 		3AE8DCB32230784A0008144B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8DCB12230784A0008144B /* Main.storyboard */; };
 		3AE8DCB52230784C0008144B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8DCB42230784C0008144B /* Assets.xcassets */; };
 		3AE8DCB82230784C0008144B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8DCB62230784C0008144B /* LaunchScreen.storyboard */; };
+		3AE8DCC5223082D60008144B /* logo-quiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE8DCC4223082D60008144B /* logo-quiz.png */; };
+		3AE8DCC72230901C0008144B /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8DCC62230901B0008144B /* QuestionsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3AE8DCB42230784C0008144B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AE8DCB72230784C0008144B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AE8DCB92230784C0008144B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AE8DCC4223082D60008144B /* logo-quiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-quiz.png"; sourceTree = "<group>"; };
+		3AE8DCC62230901B0008144B /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		3AE8DCAC2230784A0008144B /* quiz */ = {
 			isa = PBXGroup;
 			children = (
+				3AE8DCC4223082D60008144B /* logo-quiz.png */,
+				3AE8DCC32230808B0008144B /* Model */,
+				3AE8DCC122307DF90008144B /* View */,
+				3AE8DCBF22307DE90008144B /* Controller */,
 				3AE8DCAD2230784A0008144B /* AppDelegate.swift */,
 				3AE8DCAF2230784A0008144B /* ViewController.swift */,
 				3AE8DCB12230784A0008144B /* Main.storyboard */,
+				3AE8DCC62230901B0008144B /* QuestionsTableViewController.swift */,
 				3AE8DCB42230784C0008144B /* Assets.xcassets */,
 				3AE8DCB62230784C0008144B /* LaunchScreen.storyboard */,
 				3AE8DCB92230784C0008144B /* Info.plist */,
 			);
 			path = quiz;
+			sourceTree = "<group>";
+		};
+		3AE8DCBF22307DE90008144B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3AE8DCC122307DF90008144B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AE8DCC32230808B0008144B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +155,7 @@
 				3AE8DCB82230784C0008144B /* LaunchScreen.storyboard in Resources */,
 				3AE8DCB52230784C0008144B /* Assets.xcassets in Resources */,
 				3AE8DCB32230784A0008144B /* Main.storyboard in Resources */,
+				3AE8DCC5223082D60008144B /* logo-quiz.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE8DCB02230784A0008144B /* ViewController.swift in Sources */,
+				3AE8DCC72230901C0008144B /* QuestionsTableViewController.swift in Sources */,
 				3AE8DCAE2230784A0008144B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = teste.juliano.quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = teste.juliano.quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
