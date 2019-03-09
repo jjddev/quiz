@@ -9,7 +9,11 @@
 import Foundation
 
 class Question {
-    init(){
-        
+    var text: String
+    var answers: [String]
+    
+    init(_ text:String, _ answers: [String]){
+        self.text = text
+        self.answers = answers
     }
 }

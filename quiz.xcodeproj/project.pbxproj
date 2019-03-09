@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B74C8622332D4000A410E9 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B74C8522332D4000A410E9 /* QuizViewController.swift */; };
 		3AE5575B2231D64400C44758 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5575A2231D64300C44758 /* Quiz.swift */; };
 		3AE5575D2231D67D00C44758 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5575C2231D67D00C44758 /* Question.swift */; };
 		3AE8DCAE2230784A0008144B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8DCAD2230784A0008144B /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13B74C8522332D4000A410E9 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		3AE5575A2231D64300C44758 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		3AE5575C2231D67D00C44758 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3AE8DCAA2230784A0008144B /* quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				3AE8DCB42230784C0008144B /* Assets.xcassets */,
 				3AE8DCB62230784C0008144B /* LaunchScreen.storyboard */,
 				3AE8DCB92230784C0008144B /* Info.plist */,
+				13B74C8522332D4000A410E9 /* QuizViewController.swift */,
 			);
 			path = quiz;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				3AE5575D2231D67D00C44758 /* Question.swift in Sources */,
 				3AE8DCB02230784A0008144B /* ViewController.swift in Sources */,
 				3AE8DCC72230901C0008144B /* QuestionsTableViewController.swift in Sources */,
+				13B74C8622332D4000A410E9 /* QuizViewController.swift in Sources */,
 				3AE5575B2231D64400C44758 /* Quiz.swift in Sources */,
 				3AE8DCAE2230784A0008144B /* AppDelegate.swift in Sources */,
 			);

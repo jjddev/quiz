@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D40-Q0-3dA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udu-XD-F1v" userLabel="TitleView">
-                                <rect key="frame" x="16" y="48" width="343" height="489"/>
+                                <rect key="frame" x="16" y="92" width="343" height="445"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="OGi-yb-7jc">
-                                        <rect key="frame" x="-9.5" y="143" width="362" height="203"/>
+                                        <rect key="frame" x="-9.5" y="121" width="362" height="203"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,21 +80,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Nvi-y7-7WO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="131.78410794602701"/>
+            <point key="canvasLocation" x="-132" y="101.19940029985008"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="oXB-zS-TYj">
             <objects>
-                <viewController id="lWd-Ne-p7p" sceneMemberID="viewController">
+                <viewController id="lWd-Ne-p7p" customClass="QuizViewController" customModule="quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="62G-5T-vji">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9m-cc-EW2" userLabel="ViewStatus">
-                                <rect key="frame" x="16" y="25" width="343" height="56.5"/>
+                                <rect key="frame" x="16" y="69" width="343" height="56.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3g-Tl-CRS" userLabel="LabelProgresso">
                                         <rect key="frame" x="19" y="18" width="305" height="21.5"/>
@@ -131,25 +132,34 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="uYb-wd-XES" userLabel="StackViewActions">
-                                <rect key="frame" x="150.5" y="111.5" width="74" height="444"/>
+                                <rect key="frame" x="150.5" y="155.5" width="74" height="356"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rks-Rg-IrU">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="52.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odh-gT-7ID" userLabel="Alternativa 1">
-                                        <rect key="frame" x="0.0" y="123.5" width="74" height="74"/>
+                                        <rect key="frame" x="0.0" y="101.5" width="74" height="52"/>
                                         <state key="normal" title="Alternativa"/>
+                                        <connections>
+                                            <action selector="pick:" destination="lWd-Ne-p7p" eventType="touchUpInside" id="025-jU-Krp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWm-cb-XOB" userLabel="Alternativa 2">
-                                        <rect key="frame" x="0.0" y="246.5" width="74" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="202.5" width="74" height="52.5"/>
                                         <state key="normal" title="Alternativa"/>
+                                        <connections>
+                                            <action selector="pick:" destination="lWd-Ne-p7p" eventType="touchUpInside" id="2yG-ft-NtO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-AV-atM" userLabel="Alternativa 3">
-                                        <rect key="frame" x="0.0" y="370" width="74" height="74"/>
+                                        <rect key="frame" x="0.0" y="304" width="74" height="52"/>
                                         <state key="normal" title="Alternativa"/>
+                                        <connections>
+                                            <action selector="pick:" destination="lWd-Ne-p7p" eventType="touchUpInside" id="XrP-8E-rHb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -173,6 +183,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rfm-KN-w8o"/>
                     </view>
+                    <connections>
+                        <outlet property="Answer1" destination="odh-gT-7ID" id="n0G-32-aJA"/>
+                        <outlet property="Answer2" destination="BWm-cb-XOB" id="vM9-rB-0CM"/>
+                        <outlet property="Answer3" destination="1Pq-AV-atM" id="vqU-uv-IfQ"/>
+                        <outlet property="Progress" destination="H3g-Tl-CRS" id="MuE-z8-6sm"/>
+                        <outlet property="Score" destination="52S-Bw-WQL" id="J2h-Em-6jK"/>
+                        <outlet property="TextQuestion" destination="rks-Rg-IrU" id="CSY-PU-aMw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpr-Py-Dxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,11 +225,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTD-Ym-XJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="596"/>
+            <point key="canvasLocation" x="1952.8" y="595.95202398800609"/>
         </scene>
         <!--Questions Table View Controller-->
         <scene sceneID="mpE-OD-HJd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfz-LM-CdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="BX1-1h-3gF" customClass="QuestionsTableViewController" customModule="quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="77q-7S-Vcd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -234,9 +253,26 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qfz-LM-CdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-93"/>
+            <point key="canvasLocation" x="1975.2" y="-93.103448275862078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="07g-B1-geJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D40-Q0-3dA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gH2-Z5-0es">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="me7-LE-aj9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6W-8S-OX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071.2" y="101.19940029985008"/>
         </scene>
     </scenes>
     <resources>

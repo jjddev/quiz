@@ -12,12 +12,6 @@ class QuestionsTableViewController: UITableViewController {
     let questions = ["Quem ganhou a copa de 1998", "Qual a capital do Brasil", "Outro Teste"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -34,7 +28,7 @@ class QuestionsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
 
         cell.textLabel?.text = self.questions[indexPath.row]
 
