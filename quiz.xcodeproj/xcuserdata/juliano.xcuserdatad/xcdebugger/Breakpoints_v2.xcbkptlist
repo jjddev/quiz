@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "quiz/Controller/QuestionsTableViewController.swift"
+            timestampString = "573939687.53685"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "quiz/Controller/QuestionsTableViewController.swift"
+            timestampString = "573939687.537096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "QuestionsTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quiz.QuestionsTableViewController.questions.getter : Swift.Array&lt;quiz.Question&gt;"
+                  moduleName = "quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliano/Documents/quiz/quiz/Controller/QuestionsTableViewController.swift"
+                  timestampString = "573934868.310848"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quiz.QuestionsTableViewController.questions.setter : Swift.Array&lt;quiz.Question&gt;"
+                  moduleName = "quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliano/Documents/quiz/quiz/Controller/QuestionsTableViewController.swift"
+                  timestampString = "573934868.3219"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quiz.QuestionsTableViewController.init(style: __C.UITableViewStyle) -&gt; quiz.QuestionsTableViewController"
+                  moduleName = "quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliano/Documents/quiz/quiz/Controller/QuestionsTableViewController.swift"
+                  timestampString = "573934868.333392"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quiz.QuestionsTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; quiz.QuestionsTableViewController"
+                  moduleName = "quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliano/Documents/quiz/quiz/Controller/QuestionsTableViewController.swift"
+                  timestampString = "573934868.3426729"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quiz.QuestionsTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;quiz.QuestionsTableViewController&gt;"
+                  moduleName = "quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliano/Documents/quiz/quiz/Controller/QuestionsTableViewController.swift"
+                  timestampString = "573934868.353906"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "quiz/Controller/ViewController.swift"
+            timestampString = "573934247.6429271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

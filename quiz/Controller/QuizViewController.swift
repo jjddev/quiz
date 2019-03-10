@@ -18,25 +18,13 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var Progress: UILabel!
     
     var current = 0
-    var TotalQuestion = 3
+    var TotalQuestion = 5
     let quiz: Quiz = Quiz()
     var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //quiz = Quiz()
-        
-
-        TextQuestion.text = quiz.questions[current].text
-        Answer1.setTitle(quiz.questions[current].answers[0], for: .normal)
-        Answer1.tag = 0
-        
-        Answer2.setTitle(quiz.questions[current].answers[1], for: .normal)
-        Answer2.tag = 1
-        
-        Answer3.setTitle(quiz.questions[current].answers[2], for: .normal)
-        Answer3.tag = 2
+        nextQuestion()
     }
     
     
@@ -45,21 +33,17 @@ class QuizViewController: UIViewController {
     }
     
     func nextQuestion(){
-        
-        
-        
         TextQuestion.text = quiz.questions[current].text
-        Answer1.setTitle(quiz.questions[current].answers[0], for: .normal)
-        Answer1.tag = 0
         
-        Answer2.setTitle(quiz.questions[current].answers[1], for: .normal)
-        Answer2.tag = 1
+        let answers = [Answer1, Answer2, Answer3].shuffled()
+        var id = 0
         
-        Answer3.setTitle(quiz.questions[current].answers[2], for: .normal)
-        Answer3.tag = 2
-        
-        
-        
+        for item in answers {
+            item?.setTitle(quiz.questions[current].answers[id], for: .normal)
+            item?.tag = id
+            id += 1
+        }
+
     }
     
     
@@ -75,19 +59,19 @@ class QuizViewController: UIViewController {
         
         current += 1
         
-        Progress.text = "\(current + 1)/5"
-        
         if(TotalQuestion > current){
+            Progress.text = "\(current + 1)/\(TotalQuestion)  "
             nextQuestion()
         }else{
             TextQuestion.text = "Fim do quiz"
-            Answer1.isEnabled = false
-            Answer2.isEnabled = false
-            Answer3.isEnabled = false
-            
+
             Answer1.setTitle("", for: .normal)
             Answer2.setTitle("", for: .normal)
             Answer3.setTitle("", for: .normal)
+            
+            Answer1.isEnabled = false
+            Answer2.isEnabled = false
+            Answer3.isEnabled = false
         }
     }
     
