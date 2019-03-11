@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var quiz = Quiz()
+    var quiz: Quiz?
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        quiz = Quiz()
     }
     
     
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
         
         if segue.identifier == "listQuestions" {
             let next = segue.destination as! QuestionsTableViewController
-            next.questions = quiz.questions
+            next.quiz = quiz
         }
         
         

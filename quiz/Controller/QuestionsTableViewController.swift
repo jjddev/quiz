@@ -10,12 +10,12 @@ import UIKit
 
 class QuestionsTableViewController: UITableViewController {
 
-    
-    var questions = [Question]()
+    var quiz: Quiz?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(quiz)
     }
     
 
@@ -29,14 +29,14 @@ class QuestionsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.questions.count
+        return (quiz?.questions.count)!
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
 
-        cell.textLabel?.text = self.questions[indexPath.row].text
+        cell.textLabel?.text = quiz?.questions[indexPath.row].text
 
         return cell
     }
@@ -55,7 +55,7 @@ class QuestionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             //print(indexPath.row)
-            self.questions.remove(at: indexPath.row)
+            quiz!.questions.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -85,8 +85,9 @@ class QuestionsTableViewController: UITableViewController {
             
             let id = tableView.indexPathForSelectedRow?.row
             
-            next.question = questions[id!]
-            next.questions = questions
+            next.question = quiz?.questions[id!]
+            next.quiz = quiz
+            next.id = id!
         }
     }
  

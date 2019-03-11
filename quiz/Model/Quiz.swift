@@ -22,18 +22,11 @@ class Quiz {
         let q5 = Question("Campeao da copa de 1994 de futebol", ["Brasil", "Italia", "Argentina"])
         
         
-        self.questions.append(q1)
-        self.questions.append(q2)
-        self.questions.append(q3)
-        self.questions.append(q4)
-        self.questions.append(q5)
+        questions.append(q1)
+        questions.append(q2)
+        questions.append(q3)
+        questions.append(q4)
+        questions.append(q5)
         
     }
-    
-    func start (){
-        
-    }
-    
-    
-    
 }
