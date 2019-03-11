@@ -9,14 +9,37 @@
 import UIKit
 
 class NewQuestionViewController: UIViewController {
-
+    
+    var question: Question?
+    var questions: [Question] = []
+        
+    @IBOutlet weak var Answer1: UITextField!
+    @IBOutlet weak var Answer2: UITextField!
+    @IBOutlet weak var Answer3: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        Answer1.text = question?.answers[0]
+        Answer2.text = question?.answers[1]
+        Answer3.text = question?.answers[2]
+  
     }
     
-
+    
+    func save(){
+        let a1 = Answer1.text!
+        let a2 = Answer2.text!
+        let a3 = Answer3.text!
+        
+        let q = Question("LOL", [a1, a2, a3])
+        questions.append(q)
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        save()
+    }
+    
     /*
     // MARK: - Navigation
 

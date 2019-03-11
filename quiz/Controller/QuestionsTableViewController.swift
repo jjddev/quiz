@@ -12,23 +12,13 @@ class QuestionsTableViewController: UITableViewController {
 
     
     var questions = [Question]()
-    var nome = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(teste))
-        
-        self.navigationItem.rightBarButtonItem = addButton
-        
-        print(self.questions)
-        print(self.nome)
-        
-        
     }
     
-    @objc func teste(){
-        print("aquiiiiiiiiiiiiiiiiii")
-    }
+
 
     // MARK: - Table view data source
 
@@ -88,14 +78,18 @@ class QuestionsTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "editQuestion" {
+            let next = segue.destination as! NewQuestionViewController
+            
+            let id = tableView.indexPathForSelectedRow?.row
+            
+            next.question = questions[id!]
+            next.questions = questions
+        }
     }
-    */
+ 
+    
 
 }

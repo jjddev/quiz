@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="-132" y="101.19940029985008"/>
         </scene>
-        <!--Questions Table View Controller-->
+        <!--Title-->
         <scene sceneID="NtO-Pa-Khn">
             <objects>
                 <tableViewController id="4Ne-aK-cd9" customClass="QuestionsTableViewController" customModule="quiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,6 +102,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="S9x-mg-KGX" kind="show" identifier="editQuestion" id="MzN-M9-8tD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -109,6 +112,13 @@
                             <outlet property="delegate" destination="4Ne-aK-cd9" id="ffZ-J9-mp5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="lFp-Rd-QSx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xy6-Ix-rTo">
+                            <connections>
+                                <segue destination="S9x-mg-KGX" kind="show" identifier="newQuestion" id="Q19-QK-9o9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqM-dC-Afu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,13 +276,13 @@
         <!--Nova  pergunta-->
         <scene sceneID="PJq-4P-uys">
             <objects>
-                <viewController title="Nova  pergunta" id="S9x-mg-KGX" sceneMemberID="viewController">
+                <viewController title="Nova  pergunta" id="S9x-mg-KGX" customClass="NewQuestionViewController" customModule="quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PIl-gd-eWa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-HZ-Irw" userLabel="a1">
-                                <rect key="frame" x="16" y="44" width="329" height="128"/>
+                                <rect key="frame" x="16" y="88" width="329" height="128"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avg-59-Ay4">
                                         <rect key="frame" x="8" y="64" width="291" height="30"/>
@@ -299,7 +309,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1Z-y6-ZCX" userLabel="a2">
-                                <rect key="frame" x="16" y="208" width="329" height="128"/>
+                                <rect key="frame" x="16" y="252" width="329" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativa 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrS-sg-v2S">
                                         <rect key="frame" x="8" y="35" width="291" height="21"/>
@@ -359,6 +369,9 @@
                                         <rect key="frame" x="47" y="19" width="265" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Salvar"/>
+                                        <connections>
+                                            <action selector="save:" destination="S9x-mg-KGX" eventType="touchUpInside" id="aAY-ja-lBh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -375,10 +388,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b2w-52-pRH"/>
                     </view>
+                    <connections>
+                        <outlet property="Answer1" destination="avg-59-Ay4" id="ndB-Lv-aDf"/>
+                        <outlet property="Answer2" destination="fml-jR-beA" id="4Me-hY-Uee"/>
+                        <outlet property="Answer3" destination="MRp-xN-N4q" id="9Bb-TQ-mRS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfd-IB-pf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3300" y="323.38830584707648"/>
+            <point key="canvasLocation" x="2426" y="-238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="07g-B1-geJ">
@@ -405,4 +423,7 @@
     <resources>
         <image name="logo-quiz.png" width="362" height="203"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q19-QK-9o9"/>
+    </inferredMetricsTieBreakers>
 </document>

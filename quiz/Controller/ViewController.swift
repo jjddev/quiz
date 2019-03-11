@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         
         if segue.identifier == "listQuestions" {
             let next = segue.destination as! QuestionsTableViewController
-            
             next.questions = quiz.questions
         }
         
