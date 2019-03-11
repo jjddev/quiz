@@ -19,7 +19,7 @@ class QuizViewController: UIViewController {
     
     var current = 0
     var TotalQuestion = 5
-    let quiz: Quiz = Quiz()
+    var quiz: Quiz? = nil
     var score = 0
     
     override func viewDidLoad() {
@@ -33,13 +33,13 @@ class QuizViewController: UIViewController {
     }
     
     func nextQuestion(){
-        TextQuestion.text = quiz.questions[current].text
+        TextQuestion.text = quiz?.questions[current].text
         
         let answers = [Answer1, Answer2, Answer3].shuffled()
         var id = 0
         
         for item in answers {
-            item?.setTitle(quiz.questions[current].answers[id], for: .normal)
+            item?.setTitle(quiz?.questions[current].answers[id], for: .normal)
             item?.tag = id
             id += 1
         }

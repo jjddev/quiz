@@ -40,7 +40,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Iniciar"/>
                                         <connections>
-                                            <segue destination="lWd-Ne-p7p" kind="show" id="Pnn-NE-5iD"/>
+                                            <segue destination="lWd-Ne-p7p" kind="show" identifier="game" id="Pnn-NE-5iD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2A-Mk-FN7">

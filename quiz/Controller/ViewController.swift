@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         if segue.identifier == "listQuestions" {
             let next = segue.destination as! QuestionsTableViewController
             next.quiz = quiz
+        }else if segue.identifier == "game"{
+            let next = segue.destination as! QuizViewController
+            next.quiz = quiz
         }
         
         
