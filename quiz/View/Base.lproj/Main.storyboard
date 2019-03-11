@@ -49,7 +49,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Perguntas"/>
                                         <connections>
-                                            <segue destination="BX1-1h-3gF" kind="show" identifier="listQuestions" id="U6T-x8-tJp"/>
+                                            <segue destination="4Ne-aK-cd9" kind="show" identifier="listQuestions" id="D4C-oz-D2W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vq8-0S-lPx">
@@ -85,6 +85,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-132" y="101.19940029985008"/>
+        </scene>
+        <!--Questions Table View Controller-->
+        <scene sceneID="NtO-Pa-Khn">
+            <objects>
+                <tableViewController id="4Ne-aK-cd9" customClass="QuestionsTableViewController" customModule="quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ix-5V-4Lz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" id="Pd0-J8-SQi">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pd0-J8-SQi" id="2or-WO-zcf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Ne-aK-cd9" id="06g-yi-Vw8"/>
+                            <outlet property="delegate" destination="4Ne-aK-cd9" id="ffZ-J9-mp5"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqM-dC-Afu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237" y="-180"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="oXB-zS-TYj">
@@ -194,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpr-Py-Dxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="1048.4257871064469"/>
+            <point key="canvasLocation" x="-132" y="851"/>
         </scene>
         <!--Sobre-->
         <scene sceneID="oTV-Rx-c5h">
@@ -225,21 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTD-Ym-XJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.8" y="595.95202398800609"/>
-        </scene>
-        <!--Lista de perguntas-->
-        <scene sceneID="mpE-OD-HJd">
-            <objects>
-                <tableViewController title="Lista de perguntas" id="BX1-1h-3gF" customClass="QuestionsTableViewController" customModule="quiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="S9x-mg-KGX" kind="show" identifier="newQuestion" id="8I1-rp-5Of"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qfz-LM-CdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1975.2" y="-93.103448275862078"/>
+            <point key="canvasLocation" x="1009" y="589"/>
         </scene>
         <!--Nova  pergunta-->
         <scene sceneID="PJq-4P-uys">
@@ -250,7 +264,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-HZ-Irw" userLabel="a1">
-                                <rect key="frame" x="16" y="88" width="329" height="128"/>
+                                <rect key="frame" x="16" y="44" width="329" height="128"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avg-59-Ay4">
                                         <rect key="frame" x="8" y="64" width="291" height="30"/>
@@ -277,7 +291,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1Z-y6-ZCX" userLabel="a2">
-                                <rect key="frame" x="16" y="252" width="329" height="128"/>
+                                <rect key="frame" x="16" y="208" width="329" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativa 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrS-sg-v2S">
                                         <rect key="frame" x="8" y="35" width="291" height="21"/>
@@ -356,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfd-IB-pf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2836" y="-92.203898050974516"/>
+            <point key="canvasLocation" x="3300" y="323.38830584707648"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="07g-B1-geJ">

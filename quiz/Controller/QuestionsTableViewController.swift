@@ -12,10 +12,22 @@ class QuestionsTableViewController: UITableViewController {
 
     
     var questions = [Question]()
+    var nome = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(teste))
         
+        self.navigationItem.rightBarButtonItem = addButton
+        
+        print(self.questions)
+        print(self.nome)
+        
+        
+    }
+    
+    @objc func teste(){
+        print("aquiiiiiiiiiiiiiiiiii")
     }
 
     // MARK: - Table view data source
