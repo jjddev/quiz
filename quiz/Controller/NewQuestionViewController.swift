@@ -15,6 +15,8 @@ class NewQuestionViewController: UIViewController {
     var id = -1
     var owner: QuestionsTableViewController?
         
+    
+    @IBOutlet weak var _Question: UITextField!
     @IBOutlet weak var Answer1: UITextField!
     @IBOutlet weak var Answer2: UITextField!
     @IBOutlet weak var Answer3: UITextField!
@@ -22,6 +24,7 @@ class NewQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        _Question.text = question?.text
         Answer1.text = question?.answers[0]
         Answer2.text = question?.answers[1]
         Answer3.text = question?.answers[2]
@@ -33,8 +36,9 @@ class NewQuestionViewController: UIViewController {
         let a1 = Answer1.text!
         let a2 = Answer2.text!
         let a3 = Answer3.text!
+        let qt = _Question.text!
         
-        let q = Question("Texto padrao...", [a1, a2, a3])
+        let q = Question(qt, [a1, a2, a3])
         
         
         if id == -1 {
