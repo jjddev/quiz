@@ -15,10 +15,13 @@ class QuestionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(quiz)
     }
     
 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        
+    }
 
     // MARK: - Table view data source
 
@@ -88,6 +91,12 @@ class QuestionsTableViewController: UITableViewController {
             next.question = quiz?.questions[id!]
             next.quiz = quiz
             next.id = id!
+        } else if segue.identifier == "newQuestion"{
+            let next = segue.destination as! NewQuestionViewController
+            next.owner = self
+            next.id = -1
+            next.quiz = quiz
+           
         }
     }
  

@@ -24,6 +24,7 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        quiz?.questions.shuffle()
         nextQuestion()
     }
     

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "QuestionsTableViewController.viewWillAppear(_:):QuestionsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "quiz">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewQuestionViewController.id.getter:NewQuestionViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NewQuestionViewController.save(_:):NewQuestionViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NewQuestionViewController.save():NewQuestionViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

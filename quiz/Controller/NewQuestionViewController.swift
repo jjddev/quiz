@@ -13,6 +13,7 @@ class NewQuestionViewController: UIViewController {
     var question: Question?
     var quiz: Quiz?
     var id = -1
+    var owner: QuestionsTableViewController?
         
     @IBOutlet weak var Answer1: UITextField!
     @IBOutlet weak var Answer2: UITextField!
@@ -35,19 +36,20 @@ class NewQuestionViewController: UIViewController {
         
         let q = Question("Texto padrao...", [a1, a2, a3])
         
+        
         if id == -1 {
             quiz?.questions.append(q)
         }else{
             quiz?.questions[id] = q
         }
         
-        
+        self.owner?.quiz = quiz
         
     }
     
     @IBAction func save(_ sender: Any) {
         save()
-        
+        self.navigationController?.popViewController(animated: false)
     }
     
     /*
