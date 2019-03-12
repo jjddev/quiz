@@ -282,7 +282,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-HZ-Irw" userLabel="a1">
-                                <rect key="frame" x="8" y="165" width="337" height="96"/>
+                                <rect key="frame" x="8" y="182" width="337" height="96"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avg-59-Ay4">
                                         <rect key="frame" x="8" y="51" width="299" height="30"/>
@@ -310,7 +310,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1Z-y6-ZCX" userLabel="a2">
-                                <rect key="frame" x="8" y="276" width="337" height="96"/>
+                                <rect key="frame" x="8" y="293" width="337" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativa 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrS-sg-v2S">
                                         <rect key="frame" x="8" y="15" width="299" height="21"/>
@@ -338,7 +338,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7e-O3-CDa" userLabel="a3">
-                                <rect key="frame" x="15" y="402" width="330" height="96"/>
+                                <rect key="frame" x="15" y="419" width="330" height="96"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativa 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYw-XW-kdU">
                                         <rect key="frame" x="8" y="15" width="292" height="21"/>
@@ -366,16 +366,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DM-QF-gxE">
-                                <rect key="frame" x="16" y="78" width="329" height="72"/>
+                                <rect key="frame" x="16" y="78" width="329" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvX-OF-Jsa">
-                                        <rect key="frame" x="8" y="5" width="291" height="21"/>
+                                        <rect key="frame" x="8" y="15" width="291" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABa-1U-6Fg">
-                                        <rect key="frame" x="0.0" y="34" width="299" height="30"/>
+                                        <rect key="frame" x="0.0" y="51" width="299" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -383,21 +383,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="ABa-1U-6Fg" firstAttribute="top" secondItem="RvX-OF-Jsa" secondAttribute="bottom" constant="8" id="0Yr-SA-0rj"/>
+                                    <constraint firstItem="ABa-1U-6Fg" firstAttribute="top" secondItem="RvX-OF-Jsa" secondAttribute="bottom" constant="15" id="0Yr-SA-0rj"/>
                                     <constraint firstItem="ABa-1U-6Fg" firstAttribute="leading" secondItem="2DM-QF-gxE" secondAttribute="leading" id="1XM-3r-Enx"/>
                                     <constraint firstAttribute="trailing" secondItem="ABa-1U-6Fg" secondAttribute="trailing" constant="30" id="bE8-5a-feB"/>
-                                    <constraint firstItem="ABa-1U-6Fg" firstAttribute="top" secondItem="RvX-OF-Jsa" secondAttribute="bottom" constant="8" id="eI6-fp-zus"/>
+                                    <constraint firstItem="ABa-1U-6Fg" firstAttribute="top" secondItem="RvX-OF-Jsa" secondAttribute="bottom" constant="15" id="eI6-fp-zus"/>
                                     <constraint firstAttribute="trailing" secondItem="RvX-OF-Jsa" secondAttribute="trailing" constant="30" id="f7c-vN-QX9"/>
                                     <constraint firstAttribute="bottom" secondItem="ABa-1U-6Fg" secondAttribute="bottom" constant="8" id="l8G-dF-UcR"/>
-                                    <constraint firstItem="RvX-OF-Jsa" firstAttribute="top" secondItem="2DM-QF-gxE" secondAttribute="top" constant="5" id="x7N-Sl-gga"/>
+                                    <constraint firstItem="RvX-OF-Jsa" firstAttribute="top" secondItem="2DM-QF-gxE" secondAttribute="top" constant="15" id="x7N-Sl-gga"/>
                                     <constraint firstItem="RvX-OF-Jsa" firstAttribute="leading" secondItem="2DM-QF-gxE" secondAttribute="leading" constant="8" id="xmC-ns-J3p"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXl-jy-eqx" userLabel="action">
-                                <rect key="frame" x="15" y="513" width="330" height="139"/>
+                                <rect key="frame" x="15" y="530" width="330" height="122"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVo-Mc-pLW">
-                                        <rect key="frame" x="143.5" y="54.5" width="43" height="30"/>
+                                        <rect key="frame" x="143.5" y="46" width="43" height="30"/>
                                         <state key="normal" title="Salvar"/>
                                         <connections>
                                             <action selector="save:" destination="S9x-mg-KGX" eventType="touchUpInside" id="aAY-ja-lBh"/>
